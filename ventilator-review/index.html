@@ -71,12 +71,12 @@ p{margin:0 0 16px}
 .seg.i.only{border-radius:4px 4px 0 0}
 .bar-lab{display:flex;gap:28px;padding:10px 8px 0}
 .bar-lab div{flex:1;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;line-height:1.2;text-transform:uppercase;letter-spacing:.04em;color:#3C423C}
-.bar-lab small{display:block;font-family:'Barlow',sans-serif;font-weight:400;text-transform:none;letter-spacing:0;font-size:14px;color:#6A706A}
+.bar-lab small{display:block;font-family:'Barlow',sans-serif;font-weight:400;text-transform:none;letter-spacing:0;font-size:14px;color:#5E645E}
 .segv{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px}
 .legend{display:flex;gap:24px;margin:18px 0 0;font-size:15px;color:#3C423C}
 .legend span{display:inline-flex;align-items:center;gap:8px}
 .sw{width:14px;height:14px;border-radius:3px;display:inline-block}
-.note{font-size:14px;color:#6A706A;line-height:1.45;margin-top:14px}
+.note{font-size:14px;color:#5E645E;line-height:1.45;margin-top:14px}
 .quote{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:34px;line-height:1.1;color:#1B4F2A;margin:0}
 .pill{display:inline-block;background:#B3261E;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:3px}
 .rule{height:4px;width:72px;background:#C9A227;border-radius:2px;margin:20px 0 28px}
@@ -84,15 +84,17 @@ p{margin:0 0 16px}
 @media (max-width:860px){.grid2,.grid3,.grid4{grid-template-columns:repeat(1,minmax(0,1fr))}.stat{font-size:64px}.sec{padding:64px 0}.bar-wrap{height:220px;gap:12px}.bar-lab{gap:12px}.big147{font-size:150px !important}.h-hero{font-size:58px !important}.h2{font-size:40px !important}.callout{grid-template-columns:minmax(0,1fr) !important}.stat4{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
 </style>
 
+<style>.skip{position:absolute;left:-9999px;top:8px;background:#C9A227;color:#11301A;padding:10px 16px;font-weight:700;z-index:1000;border-radius:6px}.skip:focus{left:16px}a:focus-visible,button:focus-visible{outline:3px solid #C9A227;outline-offset:3px}</style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
 
 
 <div style="width: 100%; min-height: 100px; display: flex; flex-direction: column">
 
 
 <!-- NAV -->
-<div style="background: #1B4F2A; color: #F6F4EC; padding: 18px 0">
+<header style="background: #1B4F2A; color: #F6F4EC; padding: 18px 0">
   <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
     <div style="display: flex; align-items: center; gap: 14px">
       <img src="gcems_logo.jpg" alt="Greene County Paramedics" style="width: 56px; height: 56px; border-radius: 50%; display: block">
@@ -103,8 +105,9 @@ p{margin:0 0 16px}
     </div>
     <div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: .12em; text-transform: uppercase; color: #F6F4EC">Program Review · 2023 – 2026</div>
   </div>
-</div>
+</header>
 
+<main id="main">
 <!-- HERO -->
 <div style="position: relative; min-height: 680px; display: flex; align-items: flex-end; overflow: hidden; background: #1B4F2A">
   <img src="hero_fall.jpg" alt="Greene County Paramedics Medic 9 fly car in front of Catskill Mountain fall foliage" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%">
@@ -143,11 +146,11 @@ p{margin:0 0 16px}
 <div style="background:#1B4F2A;color:#F6F4EC;border-top:1px solid rgba(255,255,255,.08)">
   <div class="wrap" style="padding-top:34px;padding-bottom:34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px">
     <div style="max-width:760px">
-      <p class="eyebrow" style="color:#C9A227;font-size:16px;margin:0 0 6px 0">Presented</p>
+      <p class="eyebrow" style="color:#E0B83A;font-size:16px;margin:0 0 6px 0">Presented</p>
       <p style="margin:0;font-size:20px;line-height:1.45;color:#E4E8DE">This review was presented at the <strong style="color:#fff">NAEMSP Florida Chapter EMS Webinar</strong> on October 23, 2026, hosted by Dr. Peter Antevy.</p>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:12px">
-      <a href="https://www.linkedin.com/posts/peter-antevy-md-faems-a9b11726_ground-ems-needs-to-stop-treating-ventilators-ugcPost-7519389275252039680-oz3X/" target="_blank" rel="noopener" style="display:inline-block;padding:12px 20px;border-radius:8px;background:#C9A227;color:#11301A;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none">Watch on LinkedIn</a>
+      <a href="https://www.linkedin.com/posts/peter-antevy-md-faems-a9b11726_ground-ems-needs-to-stop-treating-ventilators-ugcPost-7519389275252039680-oz3X/" target="_blank" rel="noopener" aria-label="Watch on LinkedIn (opens in a new tab)" style="display:inline-block;padding:12px 20px;border-radius:8px;background:#C9A227;color:#11301A;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none">Watch on LinkedIn</a>
       <a href="GCEMS_Ventilator_Program_NAEMSP_FL_Webinar_2026-10-23.pdf" style="display:inline-block;padding:12px 20px;border-radius:8px;border:2px solid #C9A227;color:#F6F4EC;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none">Slides (PDF)</a>
     </div>
   </div>
@@ -156,7 +159,7 @@ p{margin:0 0 16px}
 <!-- CONTENTS -->
 <div style="background:#F6F4EC;border-bottom:1px solid #DDD9CC">
   <div class="wrap" style="padding-top:22px;padding-bottom:22px">
-    <div class="toc"><span style="color:#8A8F86">In this review</span><a href="#why">Why</a><a href="#model">The fly car model</a><a href="#timeline">How we built it</a><a href="#training">Training</a><a href="#data">The data</a><a href="#calls">On a call</a><a href="#update">October update</a><a href="#map">Across the county</a><a href="#people">The people</a><a href="#next">What's next</a><a href="#chief">From the Chief</a></div>
+    <nav class="toc" aria-label="In this review"><span style="color:#5E645E">In this review</span><a href="#why">Why</a><a href="#model">The fly car model</a><a href="#timeline">How we built it</a><a href="#training">Training</a><a href="#data">The data</a><a href="#calls">On a call</a><a href="#update">October update</a><a href="#map">Across the county</a><a href="#people">The people</a><a href="#next">What's next</a><a href="#chief">From the Chief</a></nav>
   </div>
 </div>
 
@@ -343,7 +346,7 @@ p{margin:0 0 16px}
         <div class="card" style="border-top: 6px solid #B8860B">
           <p class="eyebrow green" style="margin-bottom: 10px">Share of ventilator patients on BiPAP</p>
           <div class="stat4" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; text-align: center">
-            <div><div class="stat" style="font-size: 52px; color: #9A9F96">0%</div><div class="note" style="margin-top: 4px">LTV era</div></div>
+            <div><div class="stat" style="font-size: 52px; color: #6E736B">0%</div><div class="note" style="margin-top: 4px">LTV era</div></div>
             <div><div class="stat" style="font-size: 52px; color: #1B4F2A">39%</div><div class="note" style="margin-top: 4px">Late 2024</div></div>
             <div><div class="stat" style="font-size: 52px; color: #1B4F2A">60%</div><div class="note" style="margin-top: 4px">2025</div></div>
             <div><div class="stat" style="font-size: 52px; color: #B3261E">67%</div><div class="note" style="margin-top: 4px">2026</div></div>
@@ -353,7 +356,7 @@ p{margin:0 0 16px}
         <div class="card" style="border-top: 6px solid #B3261E">
           <p class="eyebrow green" style="margin-bottom: 10px">Intubations for respiratory failure</p>
           <div class="stat4" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; text-align: center">
-            <div><div class="stat" style="font-size: 52px; color: #9A9F96">15</div><div class="note" style="margin-top: 4px">2023<br>10 respiratory</div></div>
+            <div><div class="stat" style="font-size: 52px; color: #6E736B">15</div><div class="note" style="margin-top: 4px">2023<br>10 respiratory</div></div>
             <div><div class="stat" style="font-size: 52px; color: #1B4F2A">16</div><div class="note" style="margin-top: 4px">2024<br>8 respiratory</div></div>
             <div><div class="stat" style="font-size: 52px; color: #1B4F2A">14</div><div class="note" style="margin-top: 4px">2025<br>4 respiratory, all before April</div></div>
             <div><div class="stat" style="font-size: 52px; color: #B3261E">6</div><div class="note" style="margin-top: 4px">2026 to date<br>0 respiratory</div></div>
@@ -378,8 +381,8 @@ p{margin:0 0 16px}
         <p class="eyebrow green" style="margin-bottom: 4px">Survival to hospital discharge after cardiac arrest</p>
         <p class="note" style="margin: 0 0 22px">Survivors ÷ cardiac arrest responses, by year.</p>
         <div class="bar-wrap" style="height: 240px">
-          <div class="bar-col"><div class="seg i" style="height: 110px; background: #9A9F96"><div class="segv">5.0%</div></div></div>
-          <div class="bar-col"><div class="seg i" style="height: 125px; background: #9A9F96"><div class="segv">5.7%</div></div></div>
+          <div class="bar-col"><div class="seg i" style="height: 110px; background: #6E736B"><div class="segv">5.0%</div></div></div>
+          <div class="bar-col"><div class="seg i" style="height: 125px; background: #6E736B"><div class="segv">5.7%</div></div></div>
           <div class="bar-col"><div class="seg i" style="height: 154px"><div class="segv">7.0%</div></div></div>
           <div class="bar-col"><div class="seg i" style="height: 191px"><div class="segv">8.7%</div></div></div>
           <div class="bar-col"><div class="seg i" style="height: 169px; background: #B3261E"><div class="segv">7.7%</div></div></div>
@@ -391,7 +394,7 @@ p{margin:0 0 16px}
           <div>2025<small>4 of 46</small></div>
           <div>2026<small>3 of 39 to date</small></div>
         </div>
-        <div class="legend"><span><i class="sw" style="background: #9A9F96"></i>Before the program</span><span><i class="sw" style="background: #2E7D46"></i>Program years</span><span><i class="sw" style="background: #B3261E"></i>Year to date</span></div>
+        <div class="legend"><span><i class="sw" style="background: #6E736B"></i>Before the program</span><span><i class="sw" style="background: #2E7D46"></i>Program years</span><span><i class="sw" style="background: #B3261E"></i>Year to date</span></div>
         <p class="note">These are small numbers. One patient moves the rate by about two points in either direction, so the trend across five years matters more than any single year's figure.</p>
       </div>
     </div>
@@ -655,8 +658,9 @@ p{margin:0 0 16px}
   </div>
 </div>
 
+</main>
 <!-- FOOTER -->
-<div style="background: #11301A; color: #B9C4B5; padding: 40px 0; font-size: 14px">
+<footer style="background: #11301A; color: #B9C4B5; padding: 40px 0; font-size: 14px">
   <div class="wrap" style="display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: flex-end">
     <div style="display: flex; align-items: center; gap: 16px">
       <img src="gcems_logo.jpg" alt="" style="width: 64px; height: 64px; border-radius: 50%; display: block">
@@ -667,7 +671,7 @@ p{margin:0 0 16px}
     </div>
     <div style="max-width: 520px">Figures reflect agency records June 28, 2023 through October 8, 2026. Patient stories are shared without identifying details. Hamilton T1 and Hamilton Medical are trademarks of Hamilton Medical AG.</div>
   </div>
-</div>
+</footer>
 
 </div>
 
