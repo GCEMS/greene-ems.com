@@ -55,9 +55,10 @@ h1,h2,h3{font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight
 .nav-links a.cta{color:#0B2E24;background:#D4AF37;padding:12px 22px;border-radius:4px;font-weight:700}
 
 /* hero */
-.hero{position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:space-between;background:#0B2E24 url('../images/medic1-special-ops.jpg') center/cover no-repeat;overflow:hidden}
+.hero{position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:space-between;background:#0B2E24 url('../images/medic5-helicopter-lz.jpg') center 50%/cover no-repeat;overflow:hidden}
+.heroimg{display:none}
 .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.hero::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(11,46,36,0.5) 0%,rgba(11,46,36,.25) 40%,rgba(11,46,36,.92) 100%)}
+.hero::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(11,46,36,0.45) 0%,rgba(11,46,36,.25) 40%,rgba(11,46,36,.92) 100%)}
 .hero .copy{position:relative;z-index:2;padding:48px 56px 80px;max-width:1280px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:22px}
 .hero .year{font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700;font-size:200px;line-height:.85;color:#D4AF37;letter-spacing:-.01em;text-shadow:0 4px 40px rgba(0,0,0,.35)}
 .hero h1{font-size:64px;line-height:1;color:#fff;max-width:900px;text-shadow:0 2px 24px rgba(0,0,0,.25)}
@@ -190,9 +191,13 @@ h1,h2,h3{font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight
   .wrap,.topbar,.hero .copy,.foot,.method{padding-left:20px;padding-right:20px}
   .sec{padding:64px 0}
   .sec h2{font-size:36px}
-  .hero{min-height:0;background-size:100% auto;background-position:top center;background-repeat:no-repeat;padding-top:62vw}
-  .hero::before{background:linear-gradient(180deg,rgba(11,46,36,.35) 0%,rgba(11,46,36,.0) 30%,rgba(11,46,36,.6) 62%,rgba(11,46,36,1) 74%)}
-  .hero .copy{padding-top:0}
+  .hero{min-height:0;background:#0B2E24}
+  .hero::before{display:none}
+  .heroimg{display:block;width:100%;height:auto}
+  .topbar{padding:18px 20px}
+  .nav-links{gap:6px 14px;font-size:11px;letter-spacing:1.2px}
+  .nav-links a.cta{padding:9px 14px}
+  .hero .copy{padding-top:28px;gap:14px}
   .bphoto{min-height:320px}
   .hero .year{font-size:110px}
   .hero h1{font-size:40px}
@@ -243,10 +248,11 @@ h1,h2,h3{font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight
       <a href="../careers.html" class="cta">Join Us</a>
     </nav>
   </div>
+  <img class="heroimg" src="../images/medic5-helicopter-lz.jpg" alt="Medic 5 at a helicopter landing zone">
   <div class="copy">
     <span class="eyebrow">Greene County Paramedics · Year in Review</span>
     <div class="year" aria-hidden="true">2025</div>
-    <h1>4,125 calls<br>in 2025.</h1>
+    <h1>4,125 dispatched<br>calls in 2025.</h1>
     <p>Here is what Greene County Paramedics did with them.</p>
     <a class="scrollhint" href="#note">Scroll ↓</a>
   </div>
@@ -260,7 +266,7 @@ h1,h2,h3{font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight
     <div class="txt">
       <span class="eyebrow">From the Chief</span>
       <div style="height:18px"></div>
-      <p>2025 was a busy year. Our six paramedic units answered 4,125 calls, rode to the hospital with 2,189 patients, and added a few new tools to the trucks along the way.</p><p>This page is the short version. Thank you to the ambulance crews, fire departments, dispatchers, and hospitals we work with every day, and to the towns and the county for backing us.</p>
+      <p>2025 was a busy year. Our six paramedic units were dispatched to 4,125 calls, rode to the hospital with 2,189 patients, and had a paramedic on scene in under nine minutes on average, in the valley and on the mountaintop.</p><p>Every town in Greene County had paramedic coverage every hour of the year. This page is the short version of what that looked like. Thank you to the ambulance crews, fire departments, dispatchers, and hospitals we work with every day, and to the towns and the county for backing us.</p>
       <div class="sign">Steve Near, Chief of Operations</div>
     </div>
     <aside class="side">
@@ -449,7 +455,7 @@ h1,h2,h3{font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight
       </div>
     </div>
     <div class="strip">
-      <img src="../images/ice-stretcher.jpg" alt="Ice rescue training with a stretcher on a frozen creek" style="object-position:center 40%"><img src="../images/rope-rescue-rollover.jpg" alt="Rope rescue training at a rollover below a rock ledge" style="object-position:center 45%"><img src="../images/medic8-dusk.jpg" alt="Medic 8 at dusk" style="object-position:center 62%"><img src="../images/medic9-snow-1.jpg" alt="Medic 9 on a snowy road" style="object-position:center 60%"><img src="../images/medic5-helicopter-lz.jpg" alt="Medic 5 at a helicopter landing zone" style="object-position:center 42%"><img src="../images/medic9-snow-2.jpg" alt="Medic 9 on a snow-covered road" style="object-position:center 60%">
+      <img src="../images/ice-stretcher.jpg" alt="Ice rescue training with a stretcher on a frozen creek" style="object-position:center 40%"><img src="../images/rope-rescue-rollover.jpg" alt="Rope rescue training at a rollover below a rock ledge" style="object-position:center 45%"><img src="../images/medic8-dusk.jpg" alt="Medic 8 at dusk" style="object-position:center 62%"><img src="../images/medic1-special-ops.jpg" alt="Medic 1, the special operations truck"><img src="../images/medic9-snow-1.jpg" alt="Medic 9 on a snowy road" style="object-position:center 60%"><img src="../images/medic9-snow-2.jpg" alt="Medic 9 on a snow-covered road" style="object-position:center 60%">
     </div>
   </div>
 </section>
