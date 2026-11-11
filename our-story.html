@@ -76,6 +76,42 @@ figure{margin:0}
   [style*="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end"]{align-items:flex-start !important}
   .careers-panel{background:#0A4F39 !important}
 }
+.swipe-ui,.swipe-photo{display:none}
+@media (max-width:760px){
+.swipe{display:flex !important;flex-direction:row !important;align-items:stretch !important;gap:14px !important;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;margin-left:-20px !important;margin-right:-20px !important;padding:4px 20px 6px !important;scroll-padding-left:20px;scrollbar-width:none;min-width:0;width:100vw !important;max-width:none !important;box-sizing:border-box;column-count:auto !important}
+.swipe::-webkit-scrollbar{display:none}
+.swipe-flat{display:contents !important}
+.swipe-wrap{min-width:0;max-width:100%}
+.swipe > *,.swipe > .swipe-flat > *{flex:0 0 80% !important;scroll-snap-align:start;box-sizing:border-box;min-width:0;margin-bottom:0 !important}
+.swipe > [style*="position: absolute"]{display:none !important}
+.swipe.swipe-narrow > *{flex-basis:62% !important}
+.swipe.swipe-mid > *{flex-basis:72% !important}
+.swipe > img{height:260px !important;object-fit:cover}
+.swipe-photo{display:block;width:calc(100% + 56px);max-width:none;height:210px;object-fit:cover;margin:-28px -28px 10px;border-radius:23px 23px 0 0}
+.swipe-ui{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0A4F39}
+.swipe-ui.on-dark{color:#D4AF37}
+.swipe-dots{display:flex;gap:8px}
+.swipe-dots i{width:8px;height:8px;border-radius:50%;background:currentColor;opacity:.28;transition:opacity .2s,transform .2s}
+.swipe-dots i.on{opacity:1;transform:scale(1.35)}
+.swipe-arrow{display:inline-block;margin-left:6px;animation:swipe-nudge 1.4s ease-in-out infinite}
+@keyframes swipe-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+.swipe-ui.done .swipe-arrow{animation:none}
+}
+@media (prefers-reduced-motion:reduce){.swipe-arrow{animation:none}}
+@media (max-width:760px){
+.pc,.pch{text-align:center}
+span.pch{display:block}
+.pc span[style*="width: 36px"][style*="height: 1px"],.pch > span[style*="width: 36px"][style*="height: 1px"]{display:none !important}
+.pc > a,.pc a[style*="align-self"]{align-self:center !important}
+.pc[style*="flex-wrap"],.pc [style*="flex-wrap: wrap"]{justify-content:center !important}
+.pc > p{margin-left:auto !important;margin-right:auto !important}
+}
+.hero-phone-img{display:none}
+@media (max-width:760px){
+div[class^="hero-"]{background:#0B2E24 !important;min-height:0 !important;height:auto !important;flex-shrink:0 !important}
+.hero-phone-img{display:block;width:100%;height:66vw;object-fit:cover;flex:none}
+.hide-phone{display:none}
+}
 
 .hero-about{background:linear-gradient(180deg,rgba(5,30,22,0.25) 0%,rgba(5,30,22,0.6) 60%,#0B2E24 100%),url(images/helicopter-lz.jpg) center 62%/cover no-repeat}
 [style*="Saira Condensed"]{text-transform:uppercase;letter-spacing:.015em}
@@ -102,6 +138,7 @@ figure{margin:0}
       <a href="careers.html" style="color: #0B2E24; background: #D4AF37; padding: 12px 22px; border-radius: 4px; text-decoration: none; font-weight: 700">Join Us</a>
     </nav>
   </div>
+  <img class="hero-phone-img" src="images/helicopter-lz.jpg" alt="" style="object-position: center 62%">
   <div style="position: relative; padding: 40px 56px 64px; max-width: 1180px; width: 100%; margin: 0 auto; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
     <span style="color: #D4AF37; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>Our story</span>
     <h1 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 80px; line-height: 1.02; color: #FFFFFF; max-width: 980px">Built because<br>the county needed it.</h1>
@@ -112,7 +149,7 @@ figure{margin:0}
 <!-- Mission -->
 <div style="background: #F6F4EE; border-radius: 56px 56px 0 0; margin-top: -40px; padding: 110px 56px 80px; position: relative">
   <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; align-items: start">
-    <div style="grid-column: 1 / span 4; display: flex; flex-direction: column; gap: 12px">
+    <div class="pc" style="grid-column: 1 / span 4; display: flex; flex-direction: column; gap: 12px">
       <span style="color: #B8901F; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>Mission</span>
       <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 44px; line-height: 1.02; color: #0B2E24">Why we exist</h2>
     </div>
@@ -124,31 +161,50 @@ figure{margin:0}
 <div style="background: #F6F4EE; padding: 40px 56px 100px">
   <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; align-items: start">
     <div style="grid-column: 1 / span 7; display: flex; flex-direction: column; gap: 24px">
-      <span style="color: #B8901F; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>History</span>
-      <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 52px; line-height: 1.08; color: #0B2E24">From a patchwork to a system</h2>
+      <span class="pch" style="color: #B8901F; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>History</span>
+      <h2 class="pch" style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 52px; line-height: 1.08; color: #0B2E24">From a patchwork to a system</h2>
       <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #2F3F38">In the late 1990s, emergency medical care in Greene County was a patchwork of volunteer rescue squads and contracted commercial paramedic ambulances. Volunteerism was declining and the private services were unreliable. Something more needed to be done.</p>
       <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #2F3F38">Greene County Emergency Medical Systems, Inc. (most people call us Greene EMS or Greene County Paramedics) was formed as a 501(c)(3) not-for-profit with the support of the Greene County Rural Health Network, to provide reliable advanced life support to the residents and visitors of Greene County.</p>
       <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #2F3F38">Two paramedic units, covering the mountaintop and the Town of Cairo, went in service on August 1, 2000. They answered 550 calls that first year. A third unit and the Town of Catskill followed in 2001; by 2004 every township had signed on to the fly car system and four paramedics were operating around the clock. As call volume grew, the part-time administrator became a full-time Chief of Operations in 2007. In April 2020, Medic 8 went in service at Prattsville Hose Company as the fifth full-time unit, serving the most rural part of the county, where hospital transports routinely run an hour or more.</p>
       <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #2F3F38">Today, Greene EMS fields some of the most highly trained, best equipped and technologically advanced paramedics in New York State.</p>
     </div>
     <div style="grid-column: 8 / span 5; display: flex; flex-direction: column; gap: 24px; padding-top: 80px">
-      <img loading="lazy" src="images/medic3-snow.jpg" alt="Medic 3 in fresh snow at the Cairo station" style="width: 100%; height: 420px; object-fit: cover; object-position: center 60%; border-radius: 24px; display: block">
-      <div style="border-radius: 24px; background: #0A4F39; color: #FFFFFF; padding: 32px; display: flex; flex-direction: column; gap: 18px">
-        <span style="color: #D4AF37; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 12px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>Recognition</span>
-        <div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px; line-height: 1.5; color: #D8E4DD">
-          <span><strong style="color: #FFFFFF">EMS Agency of the Year</strong>REMO Hudson-Mohawk · 2005, 2015, 2023</span>
-          <span><strong style="color: #FFFFFF">Excellence in Quality &amp; Innovation</strong>2024</span>
-          <span><strong style="color: #FFFFFF">ALS Provider of the Year</strong>2023 · 2025, Friday day shift crew, 130 years of combined EMS service</span>
-          <span><strong style="color: #FFFFFF">Harriet C. Weber EMS Leadership Award</strong>2024</span>
+      <div style="border-radius: 24px; background: #D4AF37; color: #0B2E24; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 30px; line-height: 1.05">Regional EMS awards</span>
+          <span style="font-size: 14px; line-height: 1.45; font-weight: 600; color: #2A3A12">Awarded by the Regional Emergency Medical Organization (REMO).</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 16px">
+          <div style="display: flex; gap: 16px; align-items: flex-start; border-bottom: 1px solid rgba(11,46,36,0.22); padding-bottom: 16px">
+            <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 26px; line-height: 1; color: #0A4F39; flex-shrink: 0; width: 58px">2005</span>
+            <div style="display: flex; flex-direction: column; gap: 10px"><div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.1">EMS Agency of the Year</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">Five years after the first fly cars went in service.</span></div></div>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: flex-start; border-bottom: 1px solid rgba(11,46,36,0.22); padding-bottom: 16px">
+            <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 26px; line-height: 1; color: #0A4F39; flex-shrink: 0; width: 58px">2015</span>
+            <div style="display: flex; flex-direction: column; gap: 10px"><div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.1">EMS Agency of the Year</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">Second time receiving the award.</span></div></div>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: flex-start; border-bottom: 1px solid rgba(11,46,36,0.22); padding-bottom: 16px">
+            <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 26px; line-height: 1; color: #0A4F39; flex-shrink: 0; width: 58px">2023</span>
+            <div style="display: flex; flex-direction: column; gap: 10px"><div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.1">EMS Agency of the Year</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">Third time receiving the award.</span></div><div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.1">ALS Provider of the Year</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">Awarded to one of our paramedics.</span></div></div>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: flex-start; border-bottom: 1px solid rgba(11,46,36,0.22); padding-bottom: 16px">
+            <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 26px; line-height: 1; color: #0A4F39; flex-shrink: 0; width: 58px">2024</span>
+            <div style="display: flex; flex-direction: column; gap: 10px"><div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.1">Excellence in Quality &amp; Innovation</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">For our prehospital ventilator program.</span></div><div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.1">Harriet C. Weber EMS Leadership Award</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">Presented to our Chief of Operations.</span></div></div>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: flex-start">
+            <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 26px; line-height: 1; color: #0A4F39; flex-shrink: 0; width: 58px">2025</span>
+            <div style="display: flex; flex-direction: column; gap: 10px"><div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.1">ALS Provider of the Year</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">Our Friday day shift crew, 130 years of combined EMS service.</span></div></div>
+          </div>
         </div>
       </div>
     </div>
+    <img loading="lazy" src="images/medic3-snow.jpg" alt="Medic 3 in fresh snow at the Cairo station" style="grid-column: 1 / span 12; width: 100%; height: 520px; object-fit: cover; object-position: center 58%; border-radius: 24px; display: block">
   </div>
 </div>
 
 <!-- Timeline -->
 <div style="background: #F6F4EE; padding: 0 56px 120px">
-  <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; position: relative; padding-top: 28px">
+  <div class="swipe swipe-narrow" data-label="timeline" style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; position: relative; padding-top: 28px">
     <div style="position: absolute; left: 0; right: 0; top: 0; height: 2px; background: #D4AF37; opacity: 0.8"></div>
     <div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 32px; color: #0A4F39; line-height: 1">2000</span><span style="font-size: 14px; line-height: 1.5; color: #3B4D44">Two units in service. 550 calls.</span></div>
     <div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 32px; color: #0A4F39; line-height: 1">2004</span><span style="font-size: 14px; line-height: 1.5; color: #3B4D44">Every township on board. Four medics, 24/7.</span></div>
@@ -162,11 +218,11 @@ figure{margin:0}
 <!-- Through the years -->
 <div style="background: #F6F4EE; padding: 0 56px 120px">
   <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
-    <div style="display: flex; flex-direction: column; gap: 12px; max-width: 720px">
+    <div class="pc" style="display: flex; flex-direction: column; gap: 12px; max-width: 720px">
       <span style="color: #B8901F; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>Through the years</span>
       <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 46px; line-height: 1.08; color: #0B2E24">The same job, better tools every decade</h2>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px">
+    <div class="swipe" data-label="photos through the years" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px">
       <figure style="grid-column: span 4; margin: 0; display: flex; flex-direction: column; gap: 10px">
         <img loading="lazy" src="images/decker-450.jpg" alt="Decker ALS Unit 450, a white Jeep Cherokee, with its paramedic" style="width: 100%; height: 260px; object-fit: cover; border-radius: 16px; display: block">
         <figcaption style="font-size: 14px; line-height: 1.5; color: #3B4D44">The first fly cars: a Jeep Cherokee ALS unit from the contracted paramedic days of the 1990s.</figcaption>
@@ -208,11 +264,11 @@ figure{margin:0}
   <div style="max-width: 1180px; margin: 0 auto; border-radius: 32px; background: #0B2E24; color: #FFFFFF; padding: 56px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; align-items: center">
     <div style="grid-column: 1 / span 5; display: flex; flex-direction: column; gap: 20px">
       <img loading="lazy" src="images/covid-logo.jpg" alt="Greene County Paramedics COVID-19 Community Paramedic Program emblem" style="width: 200px; height: auto; display: block; border-radius: 12px">
-      <span style="color: #D4AF37; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>2020 to 2021</span>
-      <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 40px; line-height: 1.08">A different kind of call</h2>
+      <span class="pch" style="color: #D4AF37; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>2020 to 2021</span>
+      <h2 class="pch" style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 40px; line-height: 1.08">A different kind of call</h2>
       <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #D8E4DD">During the pandemic our paramedics stepped out of the fly cars and into gowns and face shields, staffing Greene County's COVID-19 vaccination PODs and vaccinating residents in nursing homes and community sites across the county. It was community paramedicine before we had a name for it. The emblem on the left is the one we wore for it.</p>
     </div>
-    <div style="grid-column: 6 / span 7; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+    <div class="swipe swipe-dark" data-label="vaccination clinic photos" style="grid-column: 6 / span 7; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
       <img loading="lazy" src="images/covid-pod-1.jpg" alt="A Greene County paramedic in gown, face shield and gloves drawing up a vaccine dose" style="width: 100%; height: 300px; object-fit: cover; object-position: center 30%; border-radius: 16px; display: block">
       <img loading="lazy" src="images/covid-pod-2.jpg" alt="Two Greene County paramedics in gowns and face shields at a vaccination clinic" style="width: 100%; height: 300px; object-fit: cover; object-position: center 25%; border-radius: 16px; display: block">
       <img loading="lazy" src="images/covid-pod-3.jpg" alt="Two Greene County paramedics preparing doses at a vaccination table" style="grid-column: span 2; width: 100%; height: 300px; object-fit: cover; object-position: center 45%; border-radius: 16px; display: block">
@@ -232,7 +288,7 @@ figure{margin:0}
 <div style="background: #FFFFFF; padding: 100px 56px">
   <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
     <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; align-items: end">
-      <div style="grid-column: 1 / span 7; display: flex; flex-direction: column; gap: 16px">
+      <div class="pc" style="grid-column: 1 / span 7; display: flex; flex-direction: column; gap: 16px">
         <span style="color: #0A4F39; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>What the state found</span>
         <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 52px; line-height: 1.08; color: #0B2E24">Twenty-six years ahead of the report</h2>
       </div>
@@ -263,7 +319,7 @@ figure{margin:0}
 <!-- Leadership -->
 <div style="background: #0B2E24; border-radius: 56px 56px 0 0; color: #FFFFFF; padding: 110px 56px 120px">
   <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
-    <div style="display: flex; flex-direction: column; gap: 12px; max-width: 700px">
+    <div class="pc" style="display: flex; flex-direction: column; gap: 12px; max-width: 700px">
       <span style="color: #D4AF37; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>Administration &amp; operations</span>
       <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 52px; line-height: 1.08">The people running it</h2>
     </div>
@@ -320,5 +376,56 @@ figure{margin:0}
 
 </div>
 </main>
+<script>
+(function(){
+  var rows=document.querySelectorAll('.swipe'); if(!rows.length) return;
+  if(!(window.matchMedia&&window.matchMedia('(max-width: 760px)').matches)) return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  rows.forEach(function(row){
+    var cards=[]; Array.prototype.forEach.call(row.children,function(c){ if(c.classList.contains('swipe-flat')){Array.prototype.push.apply(cards,c.children)} else if(getComputedStyle(c).position!=='absolute') cards.push(c) });
+    if(cards.length<2) return;
+    row.setAttribute('tabindex','0'); row.setAttribute('role','group'); row.setAttribute('aria-label',(row.getAttribute('data-label')||'cards')+', swipe sideways for more');
+    var ui=document.createElement('div'); ui.className='swipe-ui'+(row.classList.contains('swipe-dark')?' on-dark':''); ui.setAttribute('aria-hidden','true');
+    var dots=document.createElement('span'); dots.className='swipe-dots';
+    cards.forEach(function(){dots.appendChild(document.createElement('i'))});
+    var label=document.createElement('span'); label.innerHTML='Swipe <span class="swipe-arrow">&rarr;</span>';
+    ui.appendChild(dots); ui.appendChild(label);
+    var wrap=document.createElement('div'); wrap.className='swipe-wrap';
+    if(row.style.gridColumn){ wrap.setAttribute('style','grid-column: '+row.style.gridColumn); }
+    row.parentNode.insertBefore(wrap,row); wrap.appendChild(row); wrap.appendChild(ui);
+    function fit(){
+      var r=wrap.getBoundingClientRect(), vw=document.documentElement.clientWidth, l=Math.max(0,Math.round(r.left)), rt=Math.max(0,Math.round(vw-r.right));
+      row.style.setProperty('margin-left',(-l)+'px','important'); row.style.setProperty('margin-right',(-rt)+'px','important');
+      row.style.setProperty('padding-left',l+'px','important'); row.style.setProperty('padding-right',rt+'px','important');
+      row.style.setProperty('width',vw+'px','important'); row.style.scrollPaddingLeft=l+'px'; pad=l;
+    }
+    var pad=20; fit(); window.addEventListener('resize',fit);
+    var ticking=false, touched=false;
+    function update(){
+      ticking=false; var best=0,bd=1e9,left=row.getBoundingClientRect().left+pad;
+      cards.forEach(function(c,i){var d=Math.abs(c.getBoundingClientRect().left-left); if(d<bd){bd=d;best=i}});
+      if(row.scrollLeft+row.clientWidth>=row.scrollWidth-4) best=cards.length-1;
+      Array.prototype.forEach.call(dots.children,function(d,i){d.className=i===best?'on':''});
+      if(best>0) ui.classList.add('done');
+    }
+    row.addEventListener('scroll',function(){ if(!ticking){ticking=true; requestAnimationFrame(update)} },{passive:true});
+    row.addEventListener('touchstart',function(){touched=true},{passive:true});
+    update();
+    if(!reduce && 'IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(!e.isIntersecting||touched||row.scrollLeft>0||getComputedStyle(row).overflowX!=='auto') return;
+          io.disconnect();
+          setTimeout(function(){ if(touched||row.scrollLeft>0) return;
+            row.style.scrollSnapType='none'; row.scrollTo({left:64,behavior:'smooth'});
+            setTimeout(function(){ row.scrollTo({left:0,behavior:'smooth'}); setTimeout(function(){row.style.scrollSnapType=''},500) },520);
+          },350);
+        });
+      },{threshold:0.6});
+      io.observe(row);
+    }
+  });
+})();
+</script>
 </body>
 </html>

@@ -209,7 +209,18 @@ h1,h2,h3{font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight
   .nav-links a.cta{padding:10px 16px}
   .brand img:last-child{height:34px}
   .brand img:first-child{width:46px;height:46px}
-  .bigs,.cards,.tiles,.hls,.townlist{grid-template-columns:1fr}
+  .cards,.hls,.townlist{grid-template-columns:1fr}
+  .sec .eyebrow,.sec h2,.sec .lede{text-align:center}
+  .sec .lede{margin-left:auto;margin-right:auto}
+  .bigs,.tiles{grid-template-columns:1fr 1fr;gap:18px 16px}
+  .tiles{margin-top:36px}
+  .tile{padding:18px 16px}
+  .bigs .bignum{font-size:54px}
+  .biglabel{font-size:16px}
+  .bigsub{font-size:13px}
+  .bands.swipe > .band{flex-basis:86% !important;display:flex;flex-direction:column;min-height:0}
+  .bands.swipe .bphoto{min-height:200px;flex:none}
+  .strip.swipe > img{flex:0 0 auto !important;height:230px !important;width:auto !important;object-fit:contain}
   .bstats{padding:24px 20px}
   .bhero .bignum{font-size:64px}
   .sgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
@@ -230,6 +241,28 @@ h1,h2,h3{font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight
 @media (prefers-reduced-motion:reduce){
   .mbar,.hbar{transform:none;transition:none}
 }
+.swipe-ui,.swipe-photo{display:none}
+@media (max-width:760px){
+.swipe{display:flex !important;flex-direction:row !important;align-items:stretch !important;gap:14px !important;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;margin-left:-20px !important;margin-right:-20px !important;padding:4px 20px 6px !important;scroll-padding-left:20px;scrollbar-width:none;min-width:0;width:100vw !important;max-width:none !important;box-sizing:border-box;column-count:auto !important}
+.swipe::-webkit-scrollbar{display:none}
+.swipe-flat{display:contents !important}
+.swipe-wrap{min-width:0;max-width:100%}
+.swipe > *,.swipe > .swipe-flat > *{flex:0 0 80% !important;scroll-snap-align:start;box-sizing:border-box;min-width:0;margin-bottom:0 !important}
+.swipe > [style*="position: absolute"]{display:none !important}
+.swipe.swipe-narrow > *{flex-basis:62% !important}
+.swipe.swipe-mid > *{flex-basis:72% !important}
+.swipe > img{height:260px !important;object-fit:cover}
+.swipe-photo{display:block;width:calc(100% + 56px);max-width:none;height:210px;object-fit:cover;margin:-28px -28px 10px;border-radius:23px 23px 0 0}
+.swipe-ui{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0A4F39}
+.swipe-ui.on-dark{color:#D4AF37}
+.swipe-dots{display:flex;gap:8px}
+.swipe-dots i{width:8px;height:8px;border-radius:50%;background:currentColor;opacity:.28;transition:opacity .2s,transform .2s}
+.swipe-dots i.on{opacity:1;transform:scale(1.35)}
+.swipe-arrow{display:inline-block;margin-left:6px;animation:swipe-nudge 1.4s ease-in-out infinite}
+@keyframes swipe-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+.swipe-ui.done .swipe-arrow{animation:none}
+}
+@media (prefers-reduced-motion:reduce){.swipe-arrow{animation:none}}
 </style>
 </head>
 <body>
@@ -287,7 +320,7 @@ h1,h2,h3{font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight
   <div class="wrap">
     <span class="eyebrow">The year at a glance</span>
     <h2>By the numbers</h2>
-    <p class="lede">Six paramedic units, five stations, every town in the county, around the clock.</p>
+    <p class="lede">Six paramedic units, five stations, thirteen towns, around the clock.</p>
     <div class="bigs">
       <div class="big"><span class="bignum" data-count="4125">0</span><span class="biglabel">Calls dispatched</span><span class="bigsub">Times a paramedic unit was sent. Includes standbys for fire scenes, police activity, and out-of-county mutual aid.</span></div>
       <div class="big"><span class="bignum" data-count="3324">0</span><span class="biglabel">Patients evaluated</span><span class="bigsub">Patients a paramedic assessed and treated at the scene.</span></div>
@@ -346,7 +379,7 @@ h1,h2,h3{font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight
     <span class="eyebrow">Procedures and medications</span>
     <h2>Advanced care</h2>
     <p class="lede">What makes a call advanced life support. Also 1,806 IV and IO lines started at the scene.</p>
-    <div class="bands">
+    <div class="bands swipe swipe-dark" data-label="advanced care">
 <div class="band">
   <div class="bphoto"><img loading="lazy" src="../images/night-tailgate.jpg" alt="" style="object-position:center"></div>
   <div class="bstats">
@@ -461,7 +494,7 @@ h1,h2,h3{font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight
         <a href="../coverage.html" style="color:#0A4F39;font-weight:700;text-decoration:none">Where each unit is based →</a>
       </div>
     </div>
-    <div class="strip">
+    <div class="strip swipe" data-label="photos">
       <img src="../images/winter-rescue.jpg" alt="Rescuers packaging a patient in a litter on snow at night" style="object-position:center"><img src="../images/rope-rescue-rollover.jpg" alt="Rope rescue training at a rollover below a rock ledge" style="object-position:center 45%"><img src="../images/medic8-dusk.jpg" alt="Medic 8 at dusk" style="object-position:center 62%"><img src="../images/medic1-special-ops.jpg" alt="Medic 1, the special operations truck"><img src="../images/medic9-snow-1.jpg" alt="Medic 9 on a snowy road" style="object-position:center 60%"><img src="../images/medic9-snow-2.jpg" alt="Medic 9 on a snow-covered road" style="object-position:center 60%">
     </div>
   </div>
@@ -534,6 +567,57 @@ h1,h2,h3{font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight
     });
   }, {threshold: 0.25});
   document.querySelectorAll('.reveal, .bigs, .band').forEach(function(el){ io.observe(el); });
+})();
+</script>
+<script>
+(function(){
+  var rows=document.querySelectorAll('.swipe'); if(!rows.length) return;
+  if(!(window.matchMedia&&window.matchMedia('(max-width: 760px)').matches)) return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  rows.forEach(function(row){
+    var cards=[]; Array.prototype.forEach.call(row.children,function(c){ if(c.classList.contains('swipe-flat')){Array.prototype.push.apply(cards,c.children)} else if(getComputedStyle(c).position!=='absolute') cards.push(c) });
+    if(cards.length<2) return;
+    row.setAttribute('tabindex','0'); row.setAttribute('role','group'); row.setAttribute('aria-label',(row.getAttribute('data-label')||'cards')+', swipe sideways for more');
+    var ui=document.createElement('div'); ui.className='swipe-ui'+(row.classList.contains('swipe-dark')?' on-dark':''); ui.setAttribute('aria-hidden','true');
+    var dots=document.createElement('span'); dots.className='swipe-dots';
+    cards.forEach(function(){dots.appendChild(document.createElement('i'))});
+    var label=document.createElement('span'); label.innerHTML='Swipe <span class="swipe-arrow">&rarr;</span>';
+    ui.appendChild(dots); ui.appendChild(label);
+    var wrap=document.createElement('div'); wrap.className='swipe-wrap';
+    if(row.style.gridColumn){ wrap.setAttribute('style','grid-column: '+row.style.gridColumn); }
+    row.parentNode.insertBefore(wrap,row); wrap.appendChild(row); wrap.appendChild(ui);
+    function fit(){
+      var r=wrap.getBoundingClientRect(), vw=document.documentElement.clientWidth, l=Math.max(0,Math.round(r.left)), rt=Math.max(0,Math.round(vw-r.right));
+      row.style.setProperty('margin-left',(-l)+'px','important'); row.style.setProperty('margin-right',(-rt)+'px','important');
+      row.style.setProperty('padding-left',l+'px','important'); row.style.setProperty('padding-right',rt+'px','important');
+      row.style.setProperty('width',vw+'px','important'); row.style.scrollPaddingLeft=l+'px'; pad=l;
+    }
+    var pad=20; fit(); window.addEventListener('resize',fit);
+    var ticking=false, touched=false;
+    function update(){
+      ticking=false; var best=0,bd=1e9,left=row.getBoundingClientRect().left+pad;
+      cards.forEach(function(c,i){var d=Math.abs(c.getBoundingClientRect().left-left); if(d<bd){bd=d;best=i}});
+      if(row.scrollLeft+row.clientWidth>=row.scrollWidth-4) best=cards.length-1;
+      Array.prototype.forEach.call(dots.children,function(d,i){d.className=i===best?'on':''});
+      if(best>0) ui.classList.add('done');
+    }
+    row.addEventListener('scroll',function(){ if(!ticking){ticking=true; requestAnimationFrame(update)} },{passive:true});
+    row.addEventListener('touchstart',function(){touched=true},{passive:true});
+    update();
+    if(!reduce && 'IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(!e.isIntersecting||touched||row.scrollLeft>0||getComputedStyle(row).overflowX!=='auto') return;
+          io.disconnect();
+          setTimeout(function(){ if(touched||row.scrollLeft>0) return;
+            row.style.scrollSnapType='none'; row.scrollTo({left:64,behavior:'smooth'});
+            setTimeout(function(){ row.scrollTo({left:0,behavior:'smooth'}); setTimeout(function(){row.style.scrollSnapType=''},500) },520);
+          },350);
+        });
+      },{threshold:0.6});
+      io.observe(row);
+    }
+  });
 })();
 </script>
 </body>

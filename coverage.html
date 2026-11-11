@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Coverage | Greene County Paramedics</title>
-<meta name="description" content="Five paramedic stations and six units covering every town in Greene County, New York, with a map and station list.">
+<meta name="description" content="Five paramedic stations and six units covering thirteen towns in Greene County, New York, with a map and station list.">
 <link rel="canonical" href="https://greene-ems.com/coverage.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Greene County Paramedics">
 <meta property="og:title" content="Coverage | Greene County Paramedics">
-<meta property="og:description" content="Five paramedic stations and six units covering every town in Greene County, New York, with a map and station list.">
+<meta property="og:description" content="Five paramedic stations and six units covering thirteen towns in Greene County, New York, with a map and station list.">
 <meta property="og:url" content="https://greene-ems.com/coverage.html">
 <meta property="og:image" content="https://greene-ems.com/images/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -76,9 +76,46 @@ figure{margin:0}
   [style*="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end"]{align-items:flex-start !important}
   .careers-panel{background:#0A4F39 !important}
 }
+.swipe-ui,.swipe-photo{display:none}
+@media (max-width:760px){
+.swipe{display:flex !important;flex-direction:row !important;align-items:stretch !important;gap:14px !important;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;margin-left:-20px !important;margin-right:-20px !important;padding:4px 20px 6px !important;scroll-padding-left:20px;scrollbar-width:none;min-width:0;width:100vw !important;max-width:none !important;box-sizing:border-box;column-count:auto !important}
+.swipe::-webkit-scrollbar{display:none}
+.swipe-flat{display:contents !important}
+.swipe-wrap{min-width:0;max-width:100%}
+.swipe > *,.swipe > .swipe-flat > *{flex:0 0 80% !important;scroll-snap-align:start;box-sizing:border-box;min-width:0;margin-bottom:0 !important}
+.swipe > [style*="position: absolute"]{display:none !important}
+.swipe.swipe-narrow > *{flex-basis:62% !important}
+.swipe.swipe-mid > *{flex-basis:72% !important}
+.swipe > img{height:260px !important;object-fit:cover}
+.swipe-photo{display:block;width:calc(100% + 56px);max-width:none;height:210px;object-fit:cover;margin:-28px -28px 10px;border-radius:23px 23px 0 0}
+.swipe-ui{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0A4F39}
+.swipe-ui.on-dark{color:#D4AF37}
+.swipe-dots{display:flex;gap:8px}
+.swipe-dots i{width:8px;height:8px;border-radius:50%;background:currentColor;opacity:.28;transition:opacity .2s,transform .2s}
+.swipe-dots i.on{opacity:1;transform:scale(1.35)}
+.swipe-arrow{display:inline-block;margin-left:6px;animation:swipe-nudge 1.4s ease-in-out infinite}
+@keyframes swipe-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+.swipe-ui.done .swipe-arrow{animation:none}
+}
+@media (prefers-reduced-motion:reduce){.swipe-arrow{animation:none}}
+@media (max-width:760px){
+.pc,.pch{text-align:center}
+span.pch{display:block}
+.pc span[style*="width: 36px"][style*="height: 1px"],.pch > span[style*="width: 36px"][style*="height: 1px"]{display:none !important}
+.pc > a,.pc a[style*="align-self"]{align-self:center !important}
+.pc[style*="flex-wrap"],.pc [style*="flex-wrap: wrap"]{justify-content:center !important}
+.pc > p{margin-left:auto !important;margin-right:auto !important}
+}
+.hero-phone-img{display:none}
+@media (max-width:760px){
+div[class^="hero-"]{background:#0B2E24 !important;min-height:0 !important;height:auto !important;flex-shrink:0 !important}
+.hero-phone-img{display:block;width:100%;height:66vw;object-fit:cover;flex:none}
+.hide-phone{display:none}
+}
 
 .hero-cov{background:linear-gradient(180deg,rgba(5,30,22,0.2) 0%,rgba(5,30,22,0.6) 60%,#0B2E24 100%),url(images/medic3-hunter-mountain.jpg) center 45%/cover no-repeat}
 [style*="Saira Condensed"]{text-transform:uppercase;letter-spacing:.015em}
+@media (max-width:760px){h2[style*="white-space: nowrap"]{white-space:normal !important;text-align:center}.phone-center{text-align:center}.phone-center > div > span > span[style*="width: 36px"]{display:none !important}}
 </style>
 </head>
 <body>
@@ -102,10 +139,11 @@ figure{margin:0}
       <a href="careers.html" style="color: #0B2E24; background: #D4AF37; padding: 12px 22px; border-radius: 4px; text-decoration: none; font-weight: 700">Join Us</a>
     </nav>
   </div>
+  <img class="hero-phone-img" src="images/medic3-hunter-mountain.jpg" alt="" style="object-position: center 45%">
   <div style="position: relative; padding: 40px 56px 64px; max-width: 1180px; width: 100%; margin: 0 auto; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
     <span style="color: #D4AF37; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>Service area</span>
     <h1 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 80px; line-height: 1.02; color: #FFFFFF; max-width: 980px">Where we are,<br>and who we cover.</h1>
-    <p style="margin: 0; font-size: 20px; line-height: 1.5; color: #D8E4DD; max-width: 640px">Six paramedic units out of five stations, placed so that every town in Greene County has advanced life support within reach. Neighboring counties can call on us too.</p>
+    <p style="margin: 0; font-size: 20px; line-height: 1.5; color: #D8E4DD; max-width: 640px">Six paramedic units out of five stations, placed so that each of the thirteen towns we serve has advanced life support within reach.<span class="hide-phone"> Neighboring counties can call on us too.</span></p>
     <a href="your-town.html" style="align-self: flex-start; background: #D4AF37; color: #0B2E24; padding: 16px 28px; border-radius: 4px; font-weight: 700; font-size: 17px; text-decoration: none">Find your town</a>
   </div>
 </div>
@@ -161,8 +199,8 @@ figure{margin:0}
 <circle cx="324.4" cy="379.4" r="9" fill="#D4AF37" stroke="#0B2E24" stroke-width="3"/>
 <text x="336" y="371" text-anchor="start" font-size="12.5" font-weight="700" fill="#D4AF37" stroke="#0B2E24" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Medic 9 · Hunter</text>
 <g font-size="11.5" fill="#D8E4DD"><rect x="48" y="531" width="14" height="14" rx="3" fill="#1E7A57"/><text x="68" y="542">Primary ALS coverage</text><rect x="218" y="531" width="14" height="14" rx="3" fill="#2C5A49"/><text x="238" y="542">Mutual-aid ALS</text><circle cx="355" cy="538" r="6" fill="#D4AF37"/><text x="368" y="542">Paramedic station</text></g>
-</svg><span style="font-size: 13px; color: #5E7368; line-height: 1.5">Town boundaries are simplified. Athens, Durham and New Baltimore are split between units by fire district; see the station list below.</span></div>
-    <div style="grid-column: 8 / span 5; display: flex; flex-direction: column; gap: 28px">
+</svg><span class="phone-center" style="font-size: 13px; color: #5E7368; line-height: 1.5">Town boundaries are simplified. Athens, Durham and New Baltimore are split between units by fire district; see the station list below.</span></div>
+    <div class="phone-center" style="grid-column: 8 / span 5; display: flex; flex-direction: column; gap: 28px">
       <div style="display: flex; flex-direction: column; gap: 10px">
         <span style="color: #B8901F; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>Primary ALS coverage</span>
         <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #2F3F38">Ashland · Athens · Cairo · Coxsackie · Durham · Greenville · Hunter · Jewett · Lexington · New Baltimore · Prattsville</p>
@@ -195,7 +233,7 @@ figure{margin:0}
       </div>
       <span style="font-size: 17px; line-height: 1.5; color: #3B4D44; max-width: 620px">One paramedic unit in each, staffed around the clock, from the river towns to the mountaintop.</span>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px">
+    <div class="swipe" data-label="stations" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px">
 
       <div style="grid-column: 1 / span 12; border-radius: 28px; background: #FFFFFF; box-shadow: 0 16px 48px rgba(5,30,22,0.08); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; padding: 40px; align-items: center">
         <div style="grid-column: 1 / span 12; display: flex; flex-direction: column; gap: 12px">
@@ -231,7 +269,7 @@ figure{margin:0}
       </div>
 
     </div>
-    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; margin-top: 24px">
+    <div class="swipe" data-label="Medic 7 photos" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; margin-top: 24px">
       <img loading="lazy" src="images/freehold-station.jpg" alt="Medic 7 parked inside the Freehold Fire Department bay beside Engine 10" style="grid-column: 1 / span 5; width: 100%; height: 420px; object-fit: cover; object-position: center 55%; border-radius: 24px; display: block">
       <img loading="lazy" src="images/medic7-sunset-road.jpg" alt="Medic 7 on a county road at sunset" style="grid-column: 6 / span 7; width: 100%; height: 420px; object-fit: cover; object-position: center 60%; border-radius: 24px; display: block">
     </div>
@@ -252,5 +290,56 @@ figure{margin:0}
 
 </div>
 </main>
+<script>
+(function(){
+  var rows=document.querySelectorAll('.swipe'); if(!rows.length) return;
+  if(!(window.matchMedia&&window.matchMedia('(max-width: 760px)').matches)) return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  rows.forEach(function(row){
+    var cards=[]; Array.prototype.forEach.call(row.children,function(c){ if(c.classList.contains('swipe-flat')){Array.prototype.push.apply(cards,c.children)} else if(getComputedStyle(c).position!=='absolute') cards.push(c) });
+    if(cards.length<2) return;
+    row.setAttribute('tabindex','0'); row.setAttribute('role','group'); row.setAttribute('aria-label',(row.getAttribute('data-label')||'cards')+', swipe sideways for more');
+    var ui=document.createElement('div'); ui.className='swipe-ui'+(row.classList.contains('swipe-dark')?' on-dark':''); ui.setAttribute('aria-hidden','true');
+    var dots=document.createElement('span'); dots.className='swipe-dots';
+    cards.forEach(function(){dots.appendChild(document.createElement('i'))});
+    var label=document.createElement('span'); label.innerHTML='Swipe <span class="swipe-arrow">&rarr;</span>';
+    ui.appendChild(dots); ui.appendChild(label);
+    var wrap=document.createElement('div'); wrap.className='swipe-wrap';
+    if(row.style.gridColumn){ wrap.setAttribute('style','grid-column: '+row.style.gridColumn); }
+    row.parentNode.insertBefore(wrap,row); wrap.appendChild(row); wrap.appendChild(ui);
+    function fit(){
+      var r=wrap.getBoundingClientRect(), vw=document.documentElement.clientWidth, l=Math.max(0,Math.round(r.left)), rt=Math.max(0,Math.round(vw-r.right));
+      row.style.setProperty('margin-left',(-l)+'px','important'); row.style.setProperty('margin-right',(-rt)+'px','important');
+      row.style.setProperty('padding-left',l+'px','important'); row.style.setProperty('padding-right',rt+'px','important');
+      row.style.setProperty('width',vw+'px','important'); row.style.scrollPaddingLeft=l+'px'; pad=l;
+    }
+    var pad=20; fit(); window.addEventListener('resize',fit);
+    var ticking=false, touched=false;
+    function update(){
+      ticking=false; var best=0,bd=1e9,left=row.getBoundingClientRect().left+pad;
+      cards.forEach(function(c,i){var d=Math.abs(c.getBoundingClientRect().left-left); if(d<bd){bd=d;best=i}});
+      if(row.scrollLeft+row.clientWidth>=row.scrollWidth-4) best=cards.length-1;
+      Array.prototype.forEach.call(dots.children,function(d,i){d.className=i===best?'on':''});
+      if(best>0) ui.classList.add('done');
+    }
+    row.addEventListener('scroll',function(){ if(!ticking){ticking=true; requestAnimationFrame(update)} },{passive:true});
+    row.addEventListener('touchstart',function(){touched=true},{passive:true});
+    update();
+    if(!reduce && 'IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(!e.isIntersecting||touched||row.scrollLeft>0||getComputedStyle(row).overflowX!=='auto') return;
+          io.disconnect();
+          setTimeout(function(){ if(touched||row.scrollLeft>0) return;
+            row.style.scrollSnapType='none'; row.scrollTo({left:64,behavior:'smooth'});
+            setTimeout(function(){ row.scrollTo({left:0,behavior:'smooth'}); setTimeout(function(){row.style.scrollSnapType=''},500) },520);
+          },350);
+        });
+      },{threshold:0.6});
+      io.observe(row);
+    }
+  });
+})();
+</script>
 </body>
 </html>

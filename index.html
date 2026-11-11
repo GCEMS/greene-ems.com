@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Greene County Paramedics | Advanced Life Support for Greene County, NY</title>
-<meta name="description" content="Six advanced life support paramedic fly cars serving every town in Greene County, New York, around the clock since 2000.">
+<meta name="description" content="Six advanced life support paramedic fly cars serving thirteen towns in Greene County, New York, around the clock since 2000.">
 <link rel="canonical" href="https://greene-ems.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Greene County Paramedics">
 <meta property="og:title" content="Greene County Paramedics | Advanced Life Support for Greene County, NY">
-<meta property="og:description" content="Six advanced life support paramedic fly cars serving every town in Greene County, New York, around the clock since 2000.">
+<meta property="og:description" content="Six advanced life support paramedic fly cars serving thirteen towns in Greene County, New York, around the clock since 2000.">
 <meta property="og:url" content="https://greene-ems.com/">
 <meta property="og:image" content="https://greene-ems.com/images/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -76,12 +76,65 @@ figure{margin:0}
   [style*="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end"]{align-items:flex-start !important}
   .careers-panel{background:#0A4F39 !important}
 }
+.swipe-ui,.swipe-photo{display:none}
+@media (max-width:760px){
+.swipe{display:flex !important;flex-direction:row !important;align-items:stretch !important;gap:14px !important;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;margin-left:-20px !important;margin-right:-20px !important;padding:4px 20px 6px !important;scroll-padding-left:20px;scrollbar-width:none;min-width:0;width:100vw !important;max-width:none !important;box-sizing:border-box;column-count:auto !important}
+.swipe::-webkit-scrollbar{display:none}
+.swipe-flat{display:contents !important}
+.swipe-wrap{min-width:0;max-width:100%}
+.swipe > *,.swipe > .swipe-flat > *{flex:0 0 80% !important;scroll-snap-align:start;box-sizing:border-box;min-width:0;margin-bottom:0 !important}
+.swipe > [style*="position: absolute"]{display:none !important}
+.swipe.swipe-narrow > *{flex-basis:62% !important}
+.swipe.swipe-mid > *{flex-basis:72% !important}
+.swipe > img{height:260px !important;object-fit:cover}
+.swipe-photo{display:block;width:calc(100% + 56px);max-width:none;height:210px;object-fit:cover;margin:-28px -28px 10px;border-radius:23px 23px 0 0}
+.swipe-ui{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0A4F39}
+.swipe-ui.on-dark{color:#D4AF37}
+.swipe-dots{display:flex;gap:8px}
+.swipe-dots i{width:8px;height:8px;border-radius:50%;background:currentColor;opacity:.28;transition:opacity .2s,transform .2s}
+.swipe-dots i.on{opacity:1;transform:scale(1.35)}
+.swipe-arrow{display:inline-block;margin-left:6px;animation:swipe-nudge 1.4s ease-in-out infinite}
+@keyframes swipe-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+.swipe-ui.done .swipe-arrow{animation:none}
+}
+@media (prefers-reduced-motion:reduce){.swipe-arrow{animation:none}}
+@media (max-width:760px){
+.pc,.pch{text-align:center}
+span.pch{display:block}
+.pc span[style*="width: 36px"][style*="height: 1px"],.pch > span[style*="width: 36px"][style*="height: 1px"]{display:none !important}
+.pc > a,.pc a[style*="align-self"]{align-self:center !important}
+.pc[style*="flex-wrap"],.pc [style*="flex-wrap: wrap"]{justify-content:center !important}
+.pc > p{margin-left:auto !important;margin-right:auto !important}
+}
+.hero-phone-img{display:none}
+@media (max-width:760px){
+div[class^="hero-"]{background:#0B2E24 !important;min-height:0 !important;height:auto !important;flex-shrink:0 !important}
+.hero-phone-img{display:block;width:100%;height:66vw;object-fit:cover;flex:none}
+.hide-phone{display:none}
+}
 
 .hero-home{background:linear-gradient(180deg,rgba(5,30,22,0.42) 0%,rgba(5,30,22,0.5) 50%,#0B2E24 100%),url(images/medic7-helicopter-overhead.jpg) center 42%/cover no-repeat}
-@media (min-width:1000px){.hero-home{background:linear-gradient(90deg,#0B2E24 0%,#0B2E24 38%,rgba(11,46,36,0.6) 52%,rgba(11,46,36,0.1) 74%),linear-gradient(180deg,rgba(5,30,22,0.3) 0%,rgba(5,30,22,0.08) 50%,#0B2E24 100%),url(images/medic7-helicopter-overhead.jpg) right 66%/66% auto no-repeat,#0B2E24}}
+@media (min-width:1000px){.hero-home{background:linear-gradient(90deg,#0B2E24 0%,#0B2E24 41%,rgba(11,46,36,0.6) 55%,rgba(11,46,36,0.1) 76%),linear-gradient(180deg,rgba(5,30,22,0.3) 0%,rgba(5,30,22,0.08) 50%,#0B2E24 100%),url(images/medic7-helicopter-overhead.jpg) right -5vw top 66%/66% auto no-repeat,#0B2E24}}
 .vent-card{background:linear-gradient(180deg,rgba(11,46,36,0) 20%,rgba(11,46,36,0.95) 100%),url(images/hamilton-t1.jpg) center/cover no-repeat}
 .careers-panel{background:linear-gradient(90deg,rgba(10,79,57,0.97) 0%,rgba(10,79,57,0.9) 45%,rgba(10,79,57,0.15) 100%),url(images/ice-wall-flip.jpg) center 62%/cover no-repeat}
 [style*="Saira Condensed"]{text-transform:uppercase;letter-spacing:.015em}
+@media (max-width:760px){
+.swipe .vent-card{min-height:400px !important;padding:22px !important}
+.swipe .vent-card [style*="font-size: 38px"]{font-size:28px !important}
+.swipe .vent-card [style*="font-size: 16px"]{font-size:15px !important}
+.swipe p[style*="font-size: 21px"]{font-size:17px !important}
+.swipe[data-label="awards"] > *{flex-basis:66% !important}
+.swipe[data-label="awards"] [style*="font-size: 38px"]{font-size:46px !important}
+.stats-grid{grid-template-columns:1fr 1fr !important;gap:0 !important;padding:18px 10px !important}
+.stats-grid > *{padding:14px 6px !important;border-bottom:none !important;text-align:center}
+.stats-grid > *:nth-child(odd){border-right:1px solid #E3E8E4 !important}
+.stats-grid > *:nth-child(-n+2){border-bottom:1px solid #E3E8E4 !important}
+[style*="padding: 120px 56px"]{padding-bottom:64px !important}
+[style*="padding: 100px 56px"]{padding-top:52px !important;padding-bottom:52px !important}
+[style*="padding: 80px 56px"]{padding-top:48px !important;padding-bottom:48px !important}
+[style*="padding: 0 56px 120px"]{padding-bottom:56px !important}
+[style*="gap: 64px"]{gap:32px !important}
+}
 </style>
 </head>
 <body>
@@ -108,11 +161,12 @@ figure{margin:0}
     </nav>
   </div>
 
+  <img class="hero-phone-img" src="images/medic7-helicopter-overhead.jpg" alt="A medevac helicopter lifting off behind a Greene County Paramedics fly car" style="object-position: 62% 55%">
   <!-- Hero copy -->
   <div style="position: relative; padding: 48px 56px 72px; max-width: 1280px; width: 100%; margin: 0 auto; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
     <span style="color: #D4AF37; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 14px">Greene County, New York</span>
     <h1 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 92px; line-height: 1.02; color: #FFFFFF; max-width: 900px">Advanced care<br>doesn't wait<br><span style="color: #D4AF37">for the hospital.</span></h1>
-    <p style="margin: 0; font-size: 22px; line-height: 1.5; color: #D8E4DD; max-width: 600px">Six paramedic units covering every town in Greene County, around the clock. The nearest trauma center can be more than an hour away, so we bring everything a New York paramedic is allowed to use to your driveway, and the equipment to keep you stable for the whole ride.</p>
+    <p style="margin: 0; font-size: 22px; line-height: 1.5; color: #D8E4DD; max-width: 600px">Six paramedic units covering thirteen towns in Greene County, around the clock.<span class="hide-phone"> The nearest trauma center can be more than an hour away, so we bring everything a New York paramedic is allowed to use to your driveway, and the equipment to keep you stable for the whole ride.</span></p>
     <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: 8px">
       <a href="capabilities.html" style="background: #D4AF37; color: #0B2E24; padding: 18px 32px; border-radius: 4px; font-weight: 700; font-size: 17px; text-decoration: none">What rides in our trucks</a>
       <a href="#story" style="color: #FFFFFF; font-weight: 700; font-size: 17px; text-decoration: none; border-bottom: 2px solid #D4AF37; padding-bottom: 2px">How the fly car system works</a>
@@ -122,11 +176,11 @@ figure{margin:0}
 
 <!-- ================= STATS — overlapping strip that straddles hero and cream ================= -->
 <div style="background: #F6F4EE; padding: 0 56px 0; display: flex; flex-direction: column">
-  <div style="max-width: 1180px; width: 100%; margin: -72px auto 0; box-sizing: border-box; background: #FFFFFF; border-radius: 20px; box-shadow: 0 24px 60px rgba(5,30,22,0.25); border-top: 3px solid #D4AF37; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; padding: 36px 24px; position: relative">
+  <div class="stats-grid" style="max-width: 1180px; width: 100%; margin: -72px auto 0; box-sizing: border-box; background: #FFFFFF; border-radius: 20px; box-shadow: 0 24px 60px rgba(5,30,22,0.25); border-top: 3px solid #D4AF37; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; padding: 36px 24px; position: relative">
     <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; border-right: 1px solid #E3E8E4"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 56px; line-height: 1; color: #0A4F39">6</span><span style="font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; font-size: 13px; color: #5E7368">Paramedic units</span></div>
     <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; border-right: 1px solid #E3E8E4"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 56px; line-height: 1; color: #0A4F39">24/7</span><span style="font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; font-size: 13px; color: #5E7368">365 days a year</span></div>
     <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; border-right: 1px solid #E3E8E4"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 56px; line-height: 1; color: #0A4F39">13</span><span style="font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; font-size: 13px; color: #5E7368">Towns served</span></div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 56px; line-height: 1; color: #0A4F39">4,125</span><span style="font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; font-size: 13px; color: #5E7368">Calls in 2025</span></div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 56px; line-height: 1; color: #0A4F39">4,125</span><span style="font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; font-size: 13px; color: #5E7368">Calls dispatched in 2025</span></div>
   </div>
 </div>
 
@@ -134,8 +188,8 @@ figure{margin:0}
 <div id="story" style="background: #F6F4EE; padding: 120px 56px 140px">
   <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; align-items: start">
     <div style="grid-column: 1 / span 5; display: flex; flex-direction: column; gap: 24px; padding-top: 24px">
-      <span style="color: #0A4F39; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>The fly car system</span>
-      <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 54px; line-height: 1.08; color: #0B2E24">You call 911.<br>We're already<br>moving.</h2>
+      <span class="pch" style="color: #0A4F39; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>The fly car system</span>
+      <h2 class="pch" style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 54px; line-height: 1.08; color: #0B2E24">You call 911.<br>We're already<br>moving.</h2>
       <p style="margin: 0; font-size: 19px; line-height: 1.65; color: #2F3F38">Your local ambulance responds, and so does a Greene County Paramedic in a rapid-response SUV. The truck carries every medication and intervention New York State allows a paramedic to provide, plus the monitors, infusion pumps and ventilators you would normally only see on a critical-care transport unit.</p>
       <p style="margin: 0; font-size: 19px; line-height: 1.65; color: #2F3F38">Every call we run is a 911 call. We don't do inter-facility transfers. The model was built for a county of mountains and long roads, and we have been refining it since August 1, 2000.</p>
       <a href="our-story.html" style="font-weight: 700; font-size: 17px; color: #0A4F39; text-decoration: none; border-bottom: 2px solid #D4AF37; align-self: flex-start; padding-bottom: 2px">Read our full history</a>
@@ -150,25 +204,33 @@ figure{margin:0}
   </div>
 </div>
 
-<!-- ================= TASK FORCE ================= -->
-<div style="background: #FFFFFF; padding: 100px 56px">
-  <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; align-items: start">
-    <div style="grid-column: 1 / span 5; display: flex; flex-direction: column; gap: 20px">
-      <span style="color: #0A4F39; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>What the state found</span>
-      <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 50px; line-height: 1.08; color: #0B2E24">The model New York now recommends</h2>
-      <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #2F3F38">In March 2026 the New York State Rural Ambulance Services Task Force delivered its report to the Legislature. It describes rural EMS as "teetering on the brink of collapse" and makes 38 proposals. Number 8 is tiered response: a local ambulance plus a paramedic fly car, with the closest appropriate unit sent to every call.</p>
-      <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #2F3F38">Greene County has run that system since August 2000. Six paramedic units, every town, every day.</p>
-      <a href="https://emsleadershipacademy.com/wp-content/uploads/2026/03/2026-NYS-Rural-Ambulance-Taskforce-report.pdf" target="_blank" rel="noopener" style="font-weight: 700; font-size: 17px; color: #0A4F39; text-decoration: none; border-bottom: 2px solid #D4AF37; align-self: flex-start; padding-bottom: 2px">Read the task force report</a>
+<!-- ================= AWARDS ================= -->
+<div style="background: #FFFFFF; padding: 80px 56px">
+  <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+    <div class="pc" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 32px">
+      <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 40px; line-height: 1.08; color: #0B2E24">Regional EMS awards</h2>
+      <span style="font-size: 16px; line-height: 1.5; color: #3B4D44">Awarded by the Regional Emergency Medical Organization (REMO).</span>
     </div>
-    <div style="grid-column: 7 / span 6; display: flex; flex-direction: column; gap: 20px">
-      <div style="background: #0B2E24; color: #FFFFFF; border-radius: 24px; padding: 40px 44px; display: flex; flex-direction: column; gap: 16px">
-        <p style="margin: 0; font-size: 21px; line-height: 1.5; color: #FFFFFF">"Tiered response models consisting of BLS transporting units and ALS non transporting EMS vehicles may greatly increase response capabilities and create more resilient response systems by preserving ALS level care for when it is needed."</p>
-        <span style="font-size: 14px; color: #BCD3C7">New York State Report on Rural Ambulance Services, 2026, page 24</span>
+    <div class="swipe" data-label="awards" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; align-items: stretch">
+      <div style="background: #D4AF37; color: #0B2E24; border-radius: 20px; padding: 24px 20px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 14px 30px -18px rgba(11,46,36,0.55)">
+        <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 38px; line-height: 1; color: #0A4F39">2005</span>
+        <div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.1">EMS Agency of the Year</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">Five years after the first fly cars went in service.</span></div>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
-        <div style="background: #F6F4EE; border-radius: 16px; padding: 22px 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 40px; line-height: 1; color: #0A4F39">#8</span><span style="font-size: 14px; line-height: 1.45; color: #3B4D44">of 38 proposals: tiered response with paramedic fly cars, statewide</span></div>
-        <div style="background: #F6F4EE; border-radius: 16px; padding: 22px 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 40px; line-height: 1; color: #0A4F39">44%</span><span style="font-size: 14px; line-height: 1.45; color: #3B4D44">of certified EMS providers in New York were actively practicing in 2023</span></div>
-        <div style="background: #F6F4EE; border-radius: 16px; padding: 22px 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 40px; line-height: 1; color: #0A4F39">2000</span><span style="font-size: 14px; line-height: 1.45; color: #3B4D44">the year Greene County put paramedic fly cars on the road</span></div>
+      <div style="background: #D4AF37; color: #0B2E24; border-radius: 20px; padding: 24px 20px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 14px 30px -18px rgba(11,46,36,0.55)">
+        <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 38px; line-height: 1; color: #0A4F39">2015</span>
+        <div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.1">EMS Agency of the Year</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">Second time receiving the award.</span></div>
+      </div>
+      <div style="background: #D4AF37; color: #0B2E24; border-radius: 20px; padding: 24px 20px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 14px 30px -18px rgba(11,46,36,0.55)">
+        <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 38px; line-height: 1; color: #0A4F39">2023</span>
+        <div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.1">EMS Agency of the Year</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">Third time receiving the award.</span></div><div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.1">ALS Provider of the Year</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">Awarded to one of our paramedics.</span></div>
+      </div>
+      <div style="background: #D4AF37; color: #0B2E24; border-radius: 20px; padding: 24px 20px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 14px 30px -18px rgba(11,46,36,0.55)">
+        <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 38px; line-height: 1; color: #0A4F39">2024</span>
+        <div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.1">Excellence in Quality &amp; Innovation</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">For our prehospital ventilator program.</span></div><div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.1">Harriet C. Weber EMS Leadership Award</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">Presented to our Chief of Operations.</span></div>
+      </div>
+      <div style="background: #D4AF37; color: #0B2E24; border-radius: 20px; padding: 24px 20px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 14px 30px -18px rgba(11,46,36,0.55)">
+        <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 38px; line-height: 1; color: #0A4F39">2025</span>
+        <div style="display: flex; flex-direction: column; gap: 5px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.1">ALS Provider of the Year</span><span style="font-size: 14px; line-height: 1.4; font-weight: 600; color: #2A3A12">Our Friday day shift crew, 130 years of combined EMS service.</span></div>
       </div>
     </div>
   </div>
@@ -178,36 +240,35 @@ figure{margin:0}
 <div style="background: #0B2E24; border-radius: 56px 56px 0 0; padding: 120px 56px 140px; color: #FFFFFF; position: relative">
   <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 64px">
     <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; align-items: end">
-      <div style="grid-column: 1 / span 7; display: flex; flex-direction: column; gap: 20px">
+      <div class="pc" style="grid-column: 1 / span 7; display: flex; flex-direction: column; gap: 20px">
         <span style="color: #D4AF37; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>Capabilities</span>
-        <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 58px; line-height: 1.05">Not your average<br>ambulance call.</h2>
+        <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 58px; line-height: 1.05">Not your average<br>911 call.</h2>
       </div>
       <p style="grid-column: 8 / span 5; margin: 0; font-size: 18px; line-height: 1.6; color: #BCD3C7">Our equipment and protocols are built around one problem: long transports with sick patients. Here is some of what rides with us.</p>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px">
+    <div class="swipe swipe-dark" data-label="capabilities" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px">
       <a href="capabilities.html" class="vent-card" style="grid-column: 1 / span 7; text-decoration: none; color: #FFFFFF; min-height: 420px; border-radius: 24px; display: flex; flex-direction: column; justify-content: flex-end; padding: 32px; position: relative; overflow: hidden">
         <span style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #D4AF37; font-weight: 700">Flagship program</span>
         <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 38px; line-height: 1; margin-top: 8px">An ICU-worthy ventilator, in every car</span>
         <span style="font-size: 16px; color: #D8E4DD; line-height: 1.5; margin-top: 10px; max-width: 520px">The Hamilton T1, the same ventilator used by critical-care transport teams, rides in every fly car. Three years in, here is what it has meant for patients.</span>
       </a>
-      <div style="grid-column: 8 / span 5; display: flex; flex-direction: column; gap: 24px">
+      <div class="swipe-flat" style="grid-column: 8 / span 5; display: flex; flex-direction: column; gap: 24px">
         <div style="flex: 1; border-radius: 24px; background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.35); padding: 28px; display: flex; flex-direction: column; gap: 10px">
+          <img class="swipe-photo" src="images/sapphire-pump.jpg" alt="Sapphire infusion pump on an IV pole inside the truck" style="object-position: center 45%">
           <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 28px; line-height: 1">Precision infusions</span>
           <span style="font-size: 15px; color: #BCD3C7; line-height: 1.5">The same infusion pumps a hospital uses, so a drip started on scene runs at the right rate all the way to the ER.</span>
         </div>
         <div style="flex: 1; border-radius: 24px; background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.35); padding: 28px; display: flex; flex-direction: column; gap: 10px">
+          <img class="swipe-photo" src="images/trunk-kit.jpg" alt="Cardiac monitor and medical bags in the back of a fly car" style="object-position: center 62%">
           <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 28px; line-height: 1">Every ALS medication</span>
           <span style="font-size: 15px; color: #BCD3C7; line-height: 1.5">Every medication a New York paramedic is allowed to carry, on every truck, every shift.</span>
         </div>
       </div>
-      <div style="grid-column: 1 / span 6; border-radius: 24px; background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.35); padding: 28px; display: flex; flex-direction: column; gap: 10px">
+      <div style="grid-column: 1 / span 12; border-radius: 24px; background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.35); padding: 28px; display: flex; flex-direction: column; gap: 10px">
+        <img class="swipe-photo" src="images/cliff-rescue.jpg" alt="Rope rescue at a vehicle rollover below a rock ledge" style="object-position: center 55%">
         <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 28px; line-height: 1">Technical rescue</span>
         <span style="font-size: 15px; color: #BCD3C7; line-height: 1.5">Some of our paramedics are also trained for rope and high-angle rescue, because in the Catskills the patient is not always next to the road.</span>
-      </div>
-      <div style="grid-column: 7 / span 6; border-radius: 24px; background: #D4AF37; color: #0B2E24; padding: 28px; display: flex; flex-direction: column; gap: 10px; justify-content: space-between">
-        <span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 28px; line-height: 1">Recognized, repeatedly</span>
-        <span style="font-size: 15px; line-height: 1.55; font-weight: 600">REMO Agency of the Year, 2005 · 2015 · 2023<br>Excellence in Quality &amp; Innovation, 2024<br>ALS Provider of the Year, 2023 · 2025<br>Harriet C. Weber EMS Leadership Award, 2024</span>
       </div>
     </div>
   </div>
@@ -218,9 +279,9 @@ figure{margin:0}
   <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; align-items: center">
     <img loading="lazy" src="images/medic9-fall.jpg" alt="Medic 9 in front of the Catskills in fall color" style="grid-column: 1 / span 6; width: 100%; height: 560px; object-fit: cover; object-position: 55% center; border-radius: 28px; display: block">
     <div style="grid-column: 7 / span 6; display: flex; flex-direction: column; gap: 28px">
-      <span style="color: #0A4F39; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>Coverage</span>
-      <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 54px; line-height: 1.08; color: #0B2E24">Five stations.<br>Six hundred<br>square miles.</h2>
-      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #2F3F38">From the Hudson River to the mountains of the Catskills, a paramedic is stationed within reach of every town. We are the primary ALS agency for eleven of them and provide mutual-aid ALS to Catskill and Windham. We also respond into Albany, Columbia and Schoharie counties when they call.</p>
+      <span class="pch" style="color: #0A4F39; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>Coverage</span>
+      <h2 class="pch" style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 54px; line-height: 1.08; color: #0B2E24">Five stations.<br>Six hundred<br>square miles.</h2>
+      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #2F3F38">From the Hudson River to the mountains of the Catskills, a paramedic is stationed within reach of each of the thirteen towns we serve. We are the primary ALS agency for eleven of them and provide mutual-aid ALS to Catskill and Windham. We also respond into Albany, Columbia and Schoharie counties when they call.</p>
       <div style="display: flex; flex-direction: column; gap: 0; border-top: 1px solid #D5DED8">
         <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid #D5DED8"><span style="font-weight: 700">Medic 3 · Cairo <span style="color: #B8901F; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin-left: 8px">HQ</span></span><span style="color: #5E7368; text-align: right">Cairo, Durham, Leeds · back-up to Catskill</span></div>
         <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid #D5DED8"><span style="font-weight: 700">Medic 5 · Coxsackie</span><span style="color: #5E7368; text-align: right">Athens, Coxsackie, New Baltimore</span></div>
@@ -237,7 +298,7 @@ figure{margin:0}
 <!-- ================= CAREERS — photo-backed, inviting ================= -->
 <div style="background: #F6F4EE; padding: 0 56px 120px">
   <div class="careers-panel" style="max-width: 1180px; margin: 0 auto; border-radius: 32px; overflow: hidden; color: #FFFFFF; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; padding: 72px 64px; position: relative; min-height: 420px">
-    <div style="grid-column: 1 / span 7; display: flex; flex-direction: column; gap: 22px; position: relative">
+    <div class="pc" style="grid-column: 1 / span 7; display: flex; flex-direction: column; gap: 22px; position: relative">
       <span style="color: #D4AF37; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>Careers</span>
       <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 52px; line-height: 1.08">Come practice at the top of your certification.</h2>
       <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #D8E4DD; max-width: 520px">Long transports, real critical care, and a leadership team that invests in you. We are hiring paramedics on an ongoing basis.</p>
@@ -249,10 +310,34 @@ figure{margin:0}
   </div>
 </div>
 
+<!-- ================= TASK FORCE ================= -->
+<div style="background: #FFFFFF; padding: 100px 56px">
+  <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; align-items: start">
+    <div style="grid-column: 1 / span 5; display: flex; flex-direction: column; gap: 20px">
+      <span class="pch" style="color: #0A4F39; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px"><span style="display: inline-block; width: 36px; height: 1px; background: #D4AF37; vertical-align: middle; margin-right: 14px"></span>What the state found</span>
+      <h2 class="pch" style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 50px; line-height: 1.08; color: #0B2E24">The model New York now recommends</h2>
+      <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #2F3F38">In March 2026 the New York State Rural Ambulance Services Task Force delivered its report to the Legislature. It describes rural EMS as "teetering on the brink of collapse" and makes 38 proposals. Number 8 is tiered response: a local ambulance plus a paramedic fly car, with the closest appropriate unit sent to every call.</p>
+      <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #2F3F38">Greene County has run that system since August 2000. Today it is six paramedic units covering thirteen towns.</p>
+      <a href="https://emsleadershipacademy.com/wp-content/uploads/2026/03/2026-NYS-Rural-Ambulance-Taskforce-report.pdf" target="_blank" rel="noopener" style="font-weight: 700; font-size: 17px; color: #0A4F39; text-decoration: none; border-bottom: 2px solid #D4AF37; align-self: flex-start; padding-bottom: 2px">Read the task force report</a>
+    </div>
+    <div class="swipe" data-label="task force findings" style="grid-column: 7 / span 6; display: flex; flex-direction: column; gap: 20px">
+      <div style="background: #0B2E24; color: #FFFFFF; border-radius: 24px; padding: 40px 44px; display: flex; flex-direction: column; gap: 16px">
+        <p style="margin: 0; font-size: 21px; line-height: 1.5; color: #FFFFFF">"Tiered response models consisting of BLS transporting units and ALS non transporting EMS vehicles may greatly increase response capabilities and create more resilient response systems by preserving ALS level care for when it is needed."</p>
+        <span style="font-size: 14px; color: #BCD3C7">New York State Report on Rural Ambulance Services, 2026, page 24</span>
+      </div>
+      <div class="swipe-flat" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+        <div style="background: #F6F4EE; border-radius: 16px; padding: 22px 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 40px; line-height: 1; color: #0A4F39">#8</span><span style="font-size: 14px; line-height: 1.45; color: #3B4D44">of 38 proposals: tiered response with paramedic fly cars, statewide</span></div>
+        <div style="background: #F6F4EE; border-radius: 16px; padding: 22px 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 40px; line-height: 1; color: #0A4F39">44%</span><span style="font-size: 14px; line-height: 1.45; color: #3B4D44">of certified EMS providers in New York were actively practicing in 2023</span></div>
+        <div style="background: #F6F4EE; border-radius: 16px; padding: 22px 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 40px; line-height: 1; color: #0A4F39">2000</span><span style="font-size: 14px; line-height: 1.45; color: #3B4D44">the year Greene County put paramedic fly cars on the road</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ================= NEWS ================= -->
-<div id="news" style="background: #F6F4EE; padding: 0 56px 140px">
+<div id="news" style="background: #F6F4EE; padding: 100px 56px 140px">
   <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+    <div class="pc" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
       <h2 style="margin: 0; font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 48px; line-height: 1; color: #0B2E24">From the agency</h2>
       <a href="https://www.facebook.com/greenecountyparamedics" target="_blank" rel="noopener" style="font-weight: 700; font-size: 16px; color: #0A4F39; text-decoration: none; border-bottom: 2px solid #D4AF37; padding-bottom: 2px">Follow us on Facebook</a>
     </div>
@@ -335,5 +420,56 @@ figure{margin:0}
 
 </div>
 </main>
+<script>
+(function(){
+  var rows=document.querySelectorAll('.swipe'); if(!rows.length) return;
+  if(!(window.matchMedia&&window.matchMedia('(max-width: 760px)').matches)) return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  rows.forEach(function(row){
+    var cards=[]; Array.prototype.forEach.call(row.children,function(c){ if(c.classList.contains('swipe-flat')){Array.prototype.push.apply(cards,c.children)} else if(getComputedStyle(c).position!=='absolute') cards.push(c) });
+    if(cards.length<2) return;
+    row.setAttribute('tabindex','0'); row.setAttribute('role','group'); row.setAttribute('aria-label',(row.getAttribute('data-label')||'cards')+', swipe sideways for more');
+    var ui=document.createElement('div'); ui.className='swipe-ui'+(row.classList.contains('swipe-dark')?' on-dark':''); ui.setAttribute('aria-hidden','true');
+    var dots=document.createElement('span'); dots.className='swipe-dots';
+    cards.forEach(function(){dots.appendChild(document.createElement('i'))});
+    var label=document.createElement('span'); label.innerHTML='Swipe <span class="swipe-arrow">&rarr;</span>';
+    ui.appendChild(dots); ui.appendChild(label);
+    var wrap=document.createElement('div'); wrap.className='swipe-wrap';
+    if(row.style.gridColumn){ wrap.setAttribute('style','grid-column: '+row.style.gridColumn); }
+    row.parentNode.insertBefore(wrap,row); wrap.appendChild(row); wrap.appendChild(ui);
+    function fit(){
+      var r=wrap.getBoundingClientRect(), vw=document.documentElement.clientWidth, l=Math.max(0,Math.round(r.left)), rt=Math.max(0,Math.round(vw-r.right));
+      row.style.setProperty('margin-left',(-l)+'px','important'); row.style.setProperty('margin-right',(-rt)+'px','important');
+      row.style.setProperty('padding-left',l+'px','important'); row.style.setProperty('padding-right',rt+'px','important');
+      row.style.setProperty('width',vw+'px','important'); row.style.scrollPaddingLeft=l+'px'; pad=l;
+    }
+    var pad=20; fit(); window.addEventListener('resize',fit);
+    var ticking=false, touched=false;
+    function update(){
+      ticking=false; var best=0,bd=1e9,left=row.getBoundingClientRect().left+pad;
+      cards.forEach(function(c,i){var d=Math.abs(c.getBoundingClientRect().left-left); if(d<bd){bd=d;best=i}});
+      if(row.scrollLeft+row.clientWidth>=row.scrollWidth-4) best=cards.length-1;
+      Array.prototype.forEach.call(dots.children,function(d,i){d.className=i===best?'on':''});
+      if(best>0) ui.classList.add('done');
+    }
+    row.addEventListener('scroll',function(){ if(!ticking){ticking=true; requestAnimationFrame(update)} },{passive:true});
+    row.addEventListener('touchstart',function(){touched=true},{passive:true});
+    update();
+    if(!reduce && 'IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(!e.isIntersecting||touched||row.scrollLeft>0||getComputedStyle(row).overflowX!=='auto') return;
+          io.disconnect();
+          setTimeout(function(){ if(touched||row.scrollLeft>0) return;
+            row.style.scrollSnapType='none'; row.scrollTo({left:64,behavior:'smooth'});
+            setTimeout(function(){ row.scrollTo({left:0,behavior:'smooth'}); setTimeout(function(){row.style.scrollSnapType=''},500) },520);
+          },350);
+        });
+      },{threshold:0.6});
+      io.observe(row);
+    }
+  });
+})();
+</script>
 </body>
 </html>
